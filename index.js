@@ -1,4 +1,4 @@
-[
+/* [
   {
     "id": 0,
     "name": "Aatrox",
@@ -55,7 +55,7 @@
       "image": "./bilder/Nami.jpg"
 
   }
-]
+] */
 
 const champions = [
   { "id": 0, "name": "Aatrox", "speciality": "The world ender", "image": "./bilder/Aatrox.jpg" },
@@ -83,7 +83,7 @@ const champions = [
       championCard.classList.add('champion-card');
       
       championCard.innerHTML = `
-        <img src="${champion.image}" alt="${champion.name}">
+        <img src="${champion.image}">
         <h3>${champion.name}</h3>
         <p>${champion.speciality}</p>
         <button onclick="addToTeam(${champion.id})">Add to Team</button>
@@ -95,8 +95,8 @@ const champions = [
   
   // Funktion för att lägga till en champion i teamet
   function addToTeam(championId) {
-    if (team.length >= 4) {
-      alert("Your team can only have 4 champions.");
+    if (team.length >= 5) {
+      alert("Your team can only have 5 champions.");
       return;
     }
   
